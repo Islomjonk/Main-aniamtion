@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.title{
+    text-align: center;
+    margin: 20px 0;
+    transform: translateY(-40px);
+    opacity: 0;
+    animation-name:title;
+    animation-duration:1.5s;
+    animation-delay:1.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes title {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(252, 47, 252);
+    /* nomi */
+    animation-name: lorem;
+    /* davomiyligi */
+    animation-duration: 1.5s;
+    /* kutish vaqti */
+    animation-delay: 0s;
+    /* takrorlanish soni infinitr- cheksiz bo'ladi*/
+    animation-iteration-count: 1;
+    /* borib qyytish countsiz ishlamaydi 2 borish kelish */
+    animation-direction: alternate;
+    /* holati */
+    animation-timing-function: ease-in;
+    /*  to dagi hoosslarni saqlab qolladi*/
+    animation-fill-mode: forwards;
+}
+@keyframes lorem {
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(670px) rotate(360deg);
+        background-color: aqua;
+        border-radius: 50%;
+    }
+}
+.d{
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: darkcyan;
+    position: relative;
+
+    animation-name: card;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.card:hover{
+    animation-play-state: paused;
+}
+@keyframes card {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: 300px;
+    }
+    50%{
+        top: 300px;
+        left: 300px
+    }
+    75%{
+        top: 300px;
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
